@@ -3,6 +3,7 @@
  
  <h2>LİSTELEME İŞLEMİ</h2>
  <p>Model classında tanımladığımız tablodaki statik olarak girdiğimiz verileri aşağıdaki ajax komutuyla console ve arayüzde listeleme işlemi yapıyoruz</p>
+
    $("#btngetlist").click(function () {
         $.ajax({
             contentType: "application/json",
