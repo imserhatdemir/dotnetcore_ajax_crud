@@ -1,28 +1,10 @@
 # dotnetcore_ajax_crud
  asp.net core ajax crud işlemleri
- 
+ <br/>
  <h2>LİSTELEME İŞLEMİ</h2>
  <p>Model classında tanımladığımız tablodaki statik olarak girdiğimiz verileri aşağıdaki ajax komutuyla console ve arayüzde listeleme işlemi yapıyoruz</p>
 
-   $("#btngetlist").click(function () {
-        $.ajax({
-            contentType: "application/json",
-            dataType: "json",
-            type: "GET",
-            url: "/Admin/Writer/WriterList",
-            success: function (func) {
-                let w = jQuery.parseJSON(func)
-                console.log(w);
-                let tablehtml = "<table class=table table-bordered> <tr><th>Yazar ID</th><th>Yazar Adı</th></tr>";
-                $.each(w, (index, value) => {
-                    tablehtml += `<tr><td>${value.id}</td><td>${value.name}</td></tr>`
-                });
-                tablehtml += "</table>";
-                $("#writerlist").html(tablehtml);
-
-            }
-        });
-    });
+![image](https://user-images.githubusercontent.com/64663453/188271263-906e96bc-5c5c-4ee8-8985-a2338c289f70.png)
 
 ![image](https://user-images.githubusercontent.com/64663453/188270671-057924e4-6feb-4a36-b061-193186245f7c.png)
 <br/>
